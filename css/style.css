@@ -2,15 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    
 }
-body{
-    font-family: sans-serif !important;
 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap')
+;
+
+body{
+/* background-color: var(--black-color) !important; */
 }
 
 nav{
-    background-color:white;
-    box-shadow: 1px 1px 5px rgb(234, 233, 233) ;
+    background-color:var(--white-color);
+    box-shadow: 1px 1px 5px var(--secondary-color) ;
     height: 80px;
 }
 header{
@@ -25,27 +30,24 @@ header ul{
 }
 
 :root{
-    /* Primary Colors */
-    --primary-color: #ff6b6b; /* Coral Red */
-    --secondary-color: #f4f4f4; /* Light Gray */
+    --primary-color: #CB0000;
+    --secondary-color: #f4f4f4; 
+    --btn-hover: #82084d; /* Sky Blue */
+    --accent-color2: #f9ca24;
+    --black-color:black;
+    --white-color:white; 
+    --blue-color:rgb(2, 2, 88);
     
-    /* Accent Colors */
-    --btn-hover: #48dbfb; /* Sky Blue */
-    --accent-color2: #f9ca24; /* Sunflower Yellow */
-    /* Primary Colors */
-    /* --primary-color: #2c3e50; Midnight Blue */
-    --secondary-color: #ecf0f1; /* Clouds Gray */
-    
-    /* Accent Colors */
-    --btn-bg: #3498db; /* Dodger Blue */
-    /* --accent-color2: #e74c3c; Alizarin Crimson */
 }
 
 header nav .nav-item .nav-link{
-    color:black;
+    color:var(--black-color);
     font-weight: 600;
     font-size: 21px !important;
     font-family: sans-serif;
+}
+header nav .nav-item .nav-link:hover{
+    color: var(--primary-color);
 }
 
 /* hero section  */
@@ -72,12 +74,13 @@ header nav .nav-item .nav-link{
 .hero #hero_left h1{
     line-height: 55px;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 50px;
 }
 
 .hero #hero_left h1 span{
-    font-family:'Courier New', Courier, monospace;
-    color: #5d41ea;
+    
+    color:var(--primary-color);
+    font-family: "Pacifico", "cursive";
 }
 
 .hero #hero_left p{
@@ -87,14 +90,19 @@ header nav .nav-item .nav-link{
 }
 .hero #hero_left .btn{
     text-align: center;
-    background-color: #5d41ea;
+    background-color:transparent;
     width: 190px;
-    height: 55px;
+    height: 50px;
     font-size: 22px;
     font-weight: 600;
-    border: 3px solid  ;
+    border: 3px solid var(--black-color) ;
     border-radius:30px;
+    box-shadow: -1px 1px 10px  var(--accent-color2);
 
+}
+.hero #hero_left .btn:hover{
+    background-color: var(--accent-color2);
+    border: none;
 }
 
 /* about me  */
@@ -110,12 +118,14 @@ header nav .nav-item .nav-link{
 .about_me .about_me_first h1{
     line-height: 55px;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 48px;
+    color: var(--primary-color);
 }
 .about_me .about_me_first h3{
     line-height: 45px;
     font-weight: 600;
     font-size: 35px;
+    color: var(--blue-color);
 }
 
 .about_me .about_me_first p{
@@ -133,32 +143,45 @@ header nav .nav-item .nav-link{
     line-height: 30px;
     font-size: 20px;
     font-weight: 600;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--black-color);
+    padding-block: 10px;
+}
 
+.about_me .about_me_second h6 span{
+    color: var(--blue-color);
 }
 .about_me .about_me_second .btn{
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #5d41ea;
+    margin-block: 30px;
+    background-color: transparent;
     width: 180px;
-    height: 55px;
+    height: 50px;
     font-size: 22px;
     font-weight: 600;
-    border: 3px solid;
+    border: 3px solid var(--black-color);
     border-radius:30px;
+    box-shadow: -1px 1px 10px  var(--accent-color2);
+
+}
+
+.about_me .about_me_second .btn:hover{
+    background-color: var(--accent-color2);
+    border:none;
 }
 
 /* services  */
 
 .services{
 font-weight: 500;
+/* background-image: linear-gradient(to right , hotpink,gold,rgb(0, 255, 153)); */
 }
+
 .services h1{
-    line-height: 55px;
+    line-height: 60px;
     font-weight: 600;
-    font-size: 45px;
-    margin-block: 20px;
+    font-size: 48px;
+    margin-block: 26px;
+    color: var(--primary-color);
 }
 
 .services .services_first{
@@ -170,7 +193,13 @@ font-weight: 500;
 .services .services_first i{
     font-size: 37px;
     margin-top: 20px;
-    color: #fb7548;
+    color:var(--accent-color2);
+    cursor: pointer;
+}
+
+.services .services_first i:hover{
+    
+    color:var(--primary-color);
 }
 .services .services_second{
     display: grid;
@@ -181,7 +210,11 @@ font-weight: 500;
 .services .services_second i{
     font-size: 37px;
     margin-top: 20px;
-    color: #fb7248;
+    color:var(--accent-color2);
+    cursor: pointer;
+}
+.services .services_second i:hover{
+    color: var(--primary-color);
 }
 .services .service_design{
     text-align: center;
@@ -189,11 +222,15 @@ font-weight: 500;
     display: flex;
     flex-direction: column;
     gap: 18px;
-    background-color: #48dbfb;
+    background-color:var(--secondary-color);
+    box-shadow: -1px 1px 10px  var(--blue-color);
+
     border-radius: 30px;
 }
 .services .service_design h3{
-    font-weight: 600;
+    font-weight: 700;
+    color: var(--btn-hover);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .services .service_design p{
@@ -212,14 +249,16 @@ font-weight: 500;
 .portfolio .portfolio_first h1{
     line-height: 55px;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 48px;
     margin-block: 20px;
+    color: var(--primary-color);
 
 }
 .portfolio .portfolio_first h3{
     line-height: 45px;
     font-weight: 600;
     font-size: 35px;
+    color: var(--blue-color);
     margin-block: 10px;
 
 }
@@ -228,20 +267,25 @@ font-weight: 500;
 
 .contact{
     margin-block: 30px;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
 }
 
 .contact h1{
-    line-height: 45px;
+    line-height: 48px;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 48px;
     margin-block: 10px;
+    color: var(--primary-color);
 }
 .contact h3{
 
     line-height: 45px;
     font-weight: 600;
     font-size: 35px;
-    margin-block: 10px;
+    margin-block: 18px;
+    color: var(--blue-color);
 }
 .contact h5{
 
@@ -249,6 +293,7 @@ font-weight: 500;
     font-weight: 600;
     font-size: 23px;
     margin-block: 10px;
+    color: var(--btn-hover);
 }
 
 .contact .contact_second{
@@ -259,6 +304,11 @@ font-weight: 500;
 
 .contact .contact_second i{
     font-size: 34px;
+    color: var(--accent-color2);
+    cursor: pointer;
+}
+.contact .contact_second i:hover{
+    color: var(--primary-color);
 }
 
 .contact .contact_second_parts{
@@ -273,10 +323,11 @@ font-weight: 500;
     font-weight: 600;
     font-size: 20px;
     margin-block: 10px;
+    color: var(--btn-hover);
 }
 .contact .contact_second small{
     line-height: 30px;
-    /* font-weight: 500; */
+    font-weight: 500;
     font-size: 20px;
     margin-block: 10px;
 }
@@ -295,20 +346,34 @@ font-weight: 500;
 
 .contact .contact_five .btn{
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #5d41ea;
+    background-color:transparent;
     width: 200px;
-    height: 55px;
+    margin-block: 36px;
+    height: 50px;
     font-size: 22px;
     font-weight: 600;
-    border: 3px solid;
+    border: 3px solid var(--black-color);
     border-radius:30px;
+    box-shadow: -1px 1px 10px  var(--accent-color2);
+
+}
+
+.contact .contact_five .btn:hover{
+    background-color: var(--accent-color2);
+    border: none;
 }
 
 .contact input{
     border: 2px solid blue !important;
+    height: 50px;
+    font-weight: 500;
+    background-color: var(--secondary-color);
 }
+
+.contact input::placeholder{
+font-size: 20px;}
+.contact textarea::placeholder{
+font-size: 20px;}
 .contact textarea{
     border: 2px solid blue !important;
 
