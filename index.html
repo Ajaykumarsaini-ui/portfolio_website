@@ -20,13 +20,13 @@
               <a class="navbar-brand" href="#">Portfolio Web Logo</a>
               
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span id="navbar-toggler-icon"><i class="bi bi-list-stars"></i></span>
               </button>
 
               <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Portfolio Web Logo</h5>
+                  <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
                 </div>
 
                 <div class="offcanvas-body ">
@@ -48,6 +48,13 @@
                     <li class="nav-item">
                       <a class="nav-link" href="#">Contact me</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><div class="form-check form-switch">
+                            
+                        <input class="form-check-input" type="checkbox" id="checkbox">
+                        
+                    </div></a>
+                    </li>
                   </ul>
                   
                 </div>
@@ -61,14 +68,14 @@
     <section class="container hero">
         <div class="row">
             <div class="col-md-7" id="hero_left">
-                <h1>HELLO ! , MY NAME IS <span>AJAY</span> <br>I,M A <span>WEB DEVELOPER + DESIGNER..</span></h1>
+                <h1>HELLO ! <span id="inner_text"></span> , MY NAME IS <span>AJAY</span> <br>I,M A <span>WEB DEVELOPER <span id="plus">+</span>  <span id="cursor_text">DESIGNER</span></span></h1>
                 <p>
                 Beautiful design has the power to captivate audience and drive business growth. Specializing in creating stunning designes that transform businesses worldwide.  
                 </p>
                 <button class="btn">More About Me</button>
             </div>
             <div class="col-md-5">
-                <img class="img-fluid" src="img/handsome-man-pointing-lateral.png" alt="" srcset="">
+                <img class="img-fluid hero_img" src="img/handsome-man-pointing-lateral_inPixio.png" alt="" srcset="">
             </div>
         </div>
 
@@ -111,36 +118,36 @@
 
 <section class="container services my-5">
     <h1 class="my-4">Services</h1>
-    <div class="row services_first my-3">
-        <div class="service_design">
+    <div class="row services_first my-3 card-group m-2">
+        <div class="service_design card">
             <i class="bi bi-phone-flip"></i>
             <h3>Web Design</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem alias, ea sapiente at consequatur similique aperiam quisquam eos esse maiores iste blanditiis pariatur</p>
         </div>
-        <div class="service_design">
+        <div class="service_design card">
             <i class="bi bi-laptop"></i>
             <h3>Web Design</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem alias, ea sapiente at consequatur similique aperiam quisquam eos esse maiores iste blanditiis pariatur</p>
         </div>
-        <div class="service_design">
+        <div class="service_design card">
             <i class="bi bi-search"></i>
             <h3>Web Design</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem alias, ea sapiente at consequatur similique aperiam quisquam eos esse maiores iste blanditiis pariatur</p>
         </div>
     </div>
 
-    <div class="row services_second">
-        <div class="service_design">
+    <div class="row services_second card-group m-2">
+        <div class="service_design card">
             <i class="bi bi-palette-fill"></i>
             <h3>Web Design</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem alias, ea sapiente at consequatur similique aperiam quisquam eos esse maiores iste blanditiis pariatur</p>
         </div>
-        <div class="service_design">
+        <div class="service_design card">
             <i class="bi bi-code-slash"></i>
             <h3>Web Design</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem alias, ea sapiente at consequatur similique aperiam quisquam eos esse maiores iste blanditiis pariatur</p>
         </div>
-        <div class="service_design">
+        <div class="service_design card">
             <i class="bi bi-megaphone-fill"></i>
             <h3>Web Design</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem alias, ea sapiente at consequatur similique aperiam quisquam eos esse maiores iste blanditiis pariatur</p>
@@ -177,7 +184,7 @@
 <!-- Portfolio end  -->
 
 <!-- contact -->
-<section class="container contact my-5" style="background-image: url('img/vintage-pink-telephone-composition.jpg');">
+<section class="container contact my-5 py-5" style="background-image: url('img/vintage-pink-telephone-composition.jpg');">
     <div class="row contact_first">
         <h1>Contact Me</h1>
         <h3>Have You Any Questions?</h3>
@@ -191,7 +198,7 @@
     <div class="col-md-3 contact_second_parts">
         <i class="bi bi-geo-alt-fill"></i>
         <h6>Office</h6>
-        <small>44 Street,aravali vihar</small>
+        <small>44 Street , aravali vihar</small>
     </div>
     <div class="col-md-3 contact_second_parts">
         <i class="bi bi-envelope-at-fill"></i>
@@ -230,6 +237,24 @@
     </div>
 </section>
 <!-- contact end -->
+
+<!-- footer  -->
+<footer class="container-fluid">
+    <div class="row foooter_row">
+        <div class="col-md-6 text-center text"><h1>
+
+            Let's Talk
+        </h1>
+        </div>
+        <div class="col-md-6 text-center icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-whatsapp"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter-x"></i>
+        </div>
+    </div>
+
+</footer>
 
 
 </body>
